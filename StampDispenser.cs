@@ -143,9 +143,9 @@ namespace Stamps
                 // Test LaserFicheExample
 
                 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-                StampDispenser stampDispenserLaserFicheExample = new StampDispenser(new int[] { 90, 30, 24, 10, 6, 2, 1 });
-                Debug.Assert(stampDispenserLaserFicheExample.CalcMinNumStampsToFillRequest(18) == 3);
-                Debug.Assert(stampDispenserLaserFicheExample.CalcMinNumStampsToFillRequest(34) == 2);
+                StampDispenser stampDispenserGivenExample = new StampDispenser(new int[] { 90, 30, 24, 10, 6, 2, 1 });
+                Debug.Assert(stampDispenserGivenExample.CalcMinNumStampsToFillRequest(18) == 3);
+                Debug.Assert(stampDispenserGivenExample.CalcMinNumStampsToFillRequest(34) == 2);
                 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 
@@ -165,50 +165,50 @@ namespace Stamps
 
                 //// Test Request of Zero
 
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-                //StampDispenser stampDispenserTestZero = new StampDispenser(new int[] { 90, 30, 24, 10, 6, 2, 1 });
-                //Debug.Assert(stampDispenserTestZero.CalcMinNumStampsToFillRequest(0) == 0);
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                StampDispenser stampDispenserTestZero = new StampDispenser(new int[] { 90, 30, 24, 10, 6, 2, 1 });
+                Debug.Assert(stampDispenserTestZero.CalcMinNumStampsToFillRequest(0) == 0);
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 
 
 
-                //// Test for removal of duplicates
+                // Test for removal of duplicates
 
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-                //StampDispenser stampDispenserDuplicates = new StampDispenser(new int[] { 90, 90, 90, 30, 24, 10, 6, 2, 1 });
-                //Debug.Assert(stampDispenserDuplicates.CalcMinNumStampsToFillRequest(18) == 3);
-                //Debug.Assert(stampDispenserDuplicates.CalcMinNumStampsToFillRequest(34) == 2);
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-
-
-                //// Test for sorted array in descending order
-
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-                //StampDispenser stampDispenserUnsortedArray = new StampDispenser(new int[] { 1, 5, 12, 25 });
-                //Debug.Assert(stampDispenserUnsortedArray.CalcMinNumStampsToFillRequest(16) == 4);
-                //Debug.Assert(stampDispenserUnsortedArray.CalcMinNumStampsToFillRequest(31) == 3);
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                StampDispenser stampDispenserDuplicates = new StampDispenser(new int[] { 90, 90, 90, 30, 24, 10, 6, 2, 1 });
+                Debug.Assert(stampDispenserDuplicates.CalcMinNumStampsToFillRequest(18) == 3);
+                Debug.Assert(stampDispenserDuplicates.CalcMinNumStampsToFillRequest(34) == 2);
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
 
-                //// Test for high values (different currencies)
+                // Test for sorted array in descending order
 
-                ////++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-                //StampDispenser stampDispenserLargeNumberTest = new StampDispenser(new int[] { 1000000, 500000, 100000, 50000, 10000, 9000, 8000, 7000, 5000, 3000, 1000, 700, 500, 260, 100, 50, 12, 10, 2, 1 });
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(57) == 5);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(143) == 6);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(760) == 2);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(1740) == 5);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(12001) == 3);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(58113) == 5);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(77787) == 10);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(128001) == 5);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(487647) == 16);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(177787) == 11);
-                //Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(100000000) == 100);
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                StampDispenser stampDispenserUnsortedArray = new StampDispenser(new int[] { 1, 5, 12, 25 });
+                Debug.Assert(stampDispenserUnsortedArray.CalcMinNumStampsToFillRequest(16) == 4);
+                Debug.Assert(stampDispenserUnsortedArray.CalcMinNumStampsToFillRequest(31) == 3);
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 
-                //Console.WriteLine("Passed all Tests");
-                //Console.ReadKey();
+
+                // Test for high values (different currencies)
+
+                //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+                StampDispenser stampDispenserLargeNumberTest = new StampDispenser(new int[] { 1000000, 500000, 100000, 50000, 10000, 9000, 8000, 7000, 5000, 3000, 1000, 700, 500, 260, 100, 50, 12, 10, 2, 1 });
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(57) == 5);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(143) == 6);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(760) == 2);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(1740) == 5);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(12001) == 3);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(58113) == 5);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(77787) == 10);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(128001) == 5);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(487647) == 16);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(177787) == 11);
+                Debug.Assert(stampDispenserLargeNumberTest.CalcMinNumStampsToFillRequest(100000000) == 100);
+
+                Console.WriteLine("Passed all Tests");
+                Console.ReadKey();
                 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
             }
         }
