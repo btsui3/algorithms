@@ -140,7 +140,7 @@ namespace Stamps
         {
             static void Main(string[] args)
             {
-                // Test LaserFicheExample
+                // Test Given Example
 
                 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
                 StampDispenser stampDispenserGivenExample = new StampDispenser(new int[] { 90, 30, 24, 10, 6, 2, 1 });
